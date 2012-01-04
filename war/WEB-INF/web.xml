@@ -11,10 +11,18 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	<servlet>
 		<servlet-name>InitialLoading</servlet-name>
 		<servlet-class>de.wortopia.InitialLoading</servlet-class>
+	</servlet>
+	<servlet>
+		<servlet-name>ImportUser</servlet-name>
+		<servlet-class>de.wortopia.ImportUser</servlet-class>
 	</servlet>	
 	<servlet>
 		<servlet-name>Recache</servlet-name>
 		<servlet-class>de.wortopia.Recache</servlet-class>
+	</servlet>	
+	<servlet>
+		<servlet-name>Index</servlet-name>
+		<servlet-class>de.wortopia.controller.Index</servlet-class>
 	</servlet>	
 	
 	<servlet-mapping>
@@ -22,8 +30,16 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<url-pattern>/wortopiagae</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
+		<servlet-name>ImportUser</servlet-name>
+		<url-pattern>/importUser</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
 		<servlet-name>InitialLoading</servlet-name>
 		<url-pattern>/initialLoading</url-pattern>
+	</servlet-mapping>
+	<servlet-mapping>
+		<servlet-name>Index</servlet-name>
+		<url-pattern>/index</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Recache</servlet-name>
@@ -31,6 +47,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<welcome-file-list>
-		<welcome-file>index.html</welcome-file>
+		<welcome-file>index</welcome-file>
 	</welcome-file-list>
 </web-app>

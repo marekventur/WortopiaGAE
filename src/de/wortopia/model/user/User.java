@@ -23,7 +23,7 @@ import de.wortopia.exceptions.UsernameException;
 public class User implements Serializable {
 	@PrimaryKey
     @Persistent(valueStrategy = IdGeneratorStrategy.IDENTITY)
-	protected long id;
+	protected Long id;
     
 	@Persistent
 	protected String email = null;
@@ -59,6 +59,17 @@ public class User implements Serializable {
 	@Persistent
 	protected String bio = null;
 	
+	@Persistent
+	protected String teamName = null;
+	
+	public String getTeamName() {
+		return teamName;
+	}
+
+	public void setTeamName(String teamName) {
+		this.teamName = teamName;
+	}
+
 	public User(long id) {
 		this.id = id;
 	}
@@ -271,5 +282,23 @@ public class User implements Serializable {
 		PersistenceManager pm = PMF.get().getPersistenceManager();
 		return pm.getObjectById(User.class, id);
 	}
+
+	public String getUserId() {
+		return userId;
+	}
+
+	public void setUserId(String userId) {
+		this.userId = userId;
+	}
+
+	public String getServiceShortname() {
+		return serviceShortname;
+	}
+
+	public void setServiceShortname(String serviceShortname) {
+		this.serviceShortname = serviceShortname;
+	}
+	
+	
 
 }

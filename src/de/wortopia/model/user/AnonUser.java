@@ -41,7 +41,7 @@ public class AnonUser extends User {
 		super(0);
 		Random randomGenerator = new Random();
 		int randomId = randomGenerator.nextInt(9998)+1;
-		id = -randomId;
+		id = (long)randomId*(-1);
 		username = "Gast "+String.valueOf(randomId);
 	}
 	

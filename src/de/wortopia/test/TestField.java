@@ -2,7 +2,6 @@ package de.wortopia.test;
 
 import static org.junit.Assert.*;
 
-import java.util.Collection;
 
 import org.junit.After;
 import org.junit.Before;
