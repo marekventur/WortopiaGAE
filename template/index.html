@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Wortopia V4</title>
+  <meta name="description" content="Multiplayer-Boggle-Variante: Versuche innerhalb von 3 Minuten mehr Wörter auf dem Spielfeld zu finden als deine Gegner.">
+  <meta name="author" content="Marek Ventur">
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/main.css">
+</head>
+<body>
+	<div id="header">
+		<a href="http://www.wortopia.de" id="logo">Wortopia</div> 
+		<a href="/" id="game4">4x4</a>
+		<a href="/game5" id="game5">5x5</a>
+	</div>
+	<div id="users">
+		
+		<#if user.>
+			<div id="user_info" class="user_logged_in">	
+				<form action="/changeUsername" method="post">
+					<strong>Hallo <input type="text" name="guest_name" id="guest_name" value="Username" />.</strong>
+				</form>
+				<a href="/logout">Logout</a>
+				<a href="/account">Deinen Account verwalten</a>
+			</div>
+		<#else>
+			<div id="user_info" class="user_not_logged_in">	
+				<form action="/changeUsername" method="post">
+					<strong>Hallo <input type="text" name="guest_name" id="guest_name" value="Gast 1234" />.</strong>
+				</form>
+				
+				<form action="/login" method="post">
+					<fieldset>
+	    				<legend>Login</legend>
+	    				
+						<div class="form_row">
+							<label for="login_username">Benutzername: </label>
+							<input type="text" id="login_username" name="username" value="" />
+						</div>
+						
+						<div class="form_row">
+							<label for="login_password">Passwort: </label>
+							<input type="password" id="login_password" name="password" value="" />
+						</div>
+						
+						<div class="form_row">
+							<input type="checkbox" id="login_remember" name="remember" value="on" />
+							<label for="login_password">Login merken</label>	
+						</div>
+						
+						<input type="submit" id="login_submit" name="submit" value="Login" />
+					</fieldset>
+				</form>
+				
+			</div>	
+		</#if>
+	</div>
+	<div id="last_game">
+		<div id="last_field"></div>
+		<div id="last_words"></div>
+	</div>
+	<div id ="gaming_area">
+		<div id="field"></div>
+		<input type="text" id="game_input"></input>
+	</div>
+	<div id=""
+	
+  <script src="js/scripts.js"></script>
+</body>
+</html>
