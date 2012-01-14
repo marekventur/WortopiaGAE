@@ -24,6 +24,10 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>Index</servlet-name>
 		<servlet-class>de.wortopia.controller.Index</servlet-class>
 	</servlet>	
+	<servlet>
+		<servlet-name>ChatMessage</servlet-name>
+		<servlet-class>de.wortopia.controller.ChatMessage</servlet-class>
+	</servlet>	
 	
 	<servlet-mapping>
 		<servlet-name>WortopiaGAE</servlet-name>
@@ -37,9 +41,13 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 		<servlet-name>InitialLoading</servlet-name>
 		<url-pattern>/initialLoading</url-pattern>
 	</servlet-mapping>
-	<servlet-mapping>
+	<!--<servlet-mapping>
 		<servlet-name>Index</servlet-name>
 		<url-pattern>/index</url-pattern>
+	</servlet-mapping>-->
+	<servlet-mapping>
+		<servlet-name>ChatMessage</servlet-name>
+		<url-pattern>/chatMessage</url-pattern>
 	</servlet-mapping>
 	<servlet-mapping>
 		<servlet-name>Recache</servlet-name>
@@ -47,6 +55,6 @@ http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd" version="2.5">
 	</servlet-mapping>
 	
 	<welcome-file-list>
-		<welcome-file>index</welcome-file>
+		<welcome-file>index.jsp</welcome-file>
 	</welcome-file-list>
 </web-app>

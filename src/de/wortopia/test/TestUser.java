@@ -7,7 +7,7 @@ import org.junit.Test;
 import com.google.appengine.tools.development.testing.LocalDatastoreServiceTestConfig;
 import com.google.appengine.tools.development.testing.LocalServiceTestHelper;
 
-import de.wortopia.model.user.User;
+import de.wortopia.model.User;
 
 import static org.junit.Assert.*;
 

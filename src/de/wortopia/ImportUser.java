@@ -17,7 +17,7 @@ import com.google.appengine.api.datastore.DatastoreService;
 import com.google.appengine.api.datastore.DatastoreServiceFactory;
 
 import de.marekventur.helper.PMF;
-import de.wortopia.model.user.User;
+import de.wortopia.model.User;
 
 @SuppressWarnings("serial")
 public class ImportUser extends HttpServlet {
