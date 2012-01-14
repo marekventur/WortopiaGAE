@@ -1,6 +1,8 @@
 package de.wortopia.model;
 
-public class Word {
+import java.io.Serializable;
+
+public class Word implements Serializable {
 	public enum Status {
 		VALID(1),
 		TOO_SHORT(2),

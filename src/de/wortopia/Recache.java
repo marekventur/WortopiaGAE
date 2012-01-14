@@ -19,7 +19,7 @@ public class Recache extends HttpServlet {
 		
 		Words.recache();
 		
-		//resp.getWriter().println(Words.getInstance().size());
+		//resp.getWriter().println(Words.getAllWords().size());
 		
 		resp.getWriter().println("done");
 	}
