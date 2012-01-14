@@ -3,7 +3,6 @@ package de.wortopia.model;
 import java.util.ArrayList;
 import java.util.Collection;
 import java.util.Iterator;
-import java.util.List;
 import java.util.NoSuchElementException;
 
 import com.google.appengine.api.datastore.DatastoreService;
@@ -45,20 +44,26 @@ public class Words {
 		
 		DatastoreService datastore = DatastoreServiceFactory.getDatastoreService();
 		
-		FetchOptions options = FetchOptions.Builder.withDefaults().prefetchSize(10000).chunkSize(10000);
+		//FetchOptions options = FetchOptions.Builder.withDefaults().prefetchSize(10000).chunkSize(10000);
 		Query query = new Query("Word");
 		
-		Iterator<Entity> iterator = datastore.prepare(query).asIterator(options);
+		Iterator<Entity> iterator = datastore.prepare(query).asIterator();
 		Entity entity;
 		try {
 			while((entity = iterator.next()) != null) {
 				list.add(new Word(entity.getKey().getName()));
 			}
 		} catch (NoSuchElementException e) {
-			//e.printStackTrace();
+			e.printStackTrace();
 		}	
+	
+		//Object[] array = list.toArray();
+		
+		System.out.println(list.size());
 		
 		MemcacheService cache = MemcacheServiceFactory.getMemcacheService();
+		//cache.put(MEMCACHE_KEY, "sdfsdf", Expiration.byDeltaSeconds(60 * 60));
+		//list.clear();
 		cache.put(MEMCACHE_KEY, list, Expiration.byDeltaSeconds(60 * 60));
 	}	
 }
